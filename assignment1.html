@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timetable</title>
+<style>
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid black 2px;
+        margin-right: 75%;
+        border-radius: 100px;
+        background-color: rgb(212, 190, 232);
+    }
+
+     h1 {
+            color: rgb(27, 27, 23);
+        }
+        form {
+            background-color: black;
+            padding: 20px;
+            display: inline-block;
+            width: 100%; /* Slightly stretched */
+        }
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 45%;
+        }
+        input[type="submit"] {
+            background-color: green;
+        }
+        input[type="reset"] {
+            background-color: red;
+        }
+
+  /* Basic table styling */
+  table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: rgb(103, 244, 112);
+  }
+
+  th.days, td.monday, td.wednesday, td.friday {
+    background-color: rgb(202, 62, 31);
+  }
+
+  td.lunch {
+    background-color: rgb(103, 244, 112); /* Make the whole "Lunch" column blue */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+  }
+
+  th.lunch {
+    display: none; /* Remove the header for "Lunch" */
+  }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Name : JIGNESH</li>
+            <li>Class : CSE-3</li>
+            <li>Roll No : 23/CS/194</li>
+        </ul>
+    </nav>
+
+<hr>
+    <div class="container">
+        <div class="registration">
+            <h1>Registration Form</h1>
+        </div>
+
+        <form action="#" method="post">
+            <label for="name">Enter name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="password">Enter password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="address">Enter address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label>Select game:</label>
+            <input type="checkbox" id="hockey" name="game" value="hockey">
+            <label for="hockey">Hockey</label>
+            <input type="checkbox" id="football" name="game" value="football">
+            <label for="football">Football</label>
+            <input type="checkbox" id="cricket" name="game" value="cricket">
+            <label for="cricket">Cricket</label>
+            <input type="checkbox" id="badminton" name="game" value="badminton">
+            <label for="badminton">Badminton</label>
+            <input type="checkbox" id="volleyball" name="game" value="volleyball">
+            <label for="volleyball">Volleyball</label><br>
+
+            <div class="radio">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <div class="radio">
+                <label>Select your age:</label>
+                <select id="age" name="age" required>
+                  
+                </select>
+            </div>
+
+            <label for="photo">Select photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <div class="buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit Form">
+            </div>
+        </form>
+    </div>
+<hr>
+    <h1>Sign Up</h1>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="address">Enter Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label>Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+        </select>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="password">Confirm Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I agree to the terms of use</label>
+
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="CANCEL">
+    </form>
+<hr>
+    <table border=1>
+        <caption><h1>Web Technologies-Developers List</h1></caption>
+        <tr>
+        <th>SNo.</th>
+        <th>Devloper Name</th>
+        <th>Language</th>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>Bemers Lee</td>
+        <td>HTML</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>Hakon Wium Lie</td>
+        <td>CSS</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>Brendan Eich</td>
+        <td>JavaScript</td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>Rasmus Lerdorf</td>
+        <td>PHP</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>James Goslang</td>
+        <td>JAVA</td>
+        </tr>
+        </table>
+    <hr>
+<h1>Timetable</h1>
+<table>
+  <tr>
+    <th class="days">Days</th>
+    <th>1</th>
+    <th>2</th>
+    <th class="lunch"></th> <!-- Remove the header for "Lunch" -->
+    <th></th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td class="monday">Monday</td>
+    <td>English</td>
+    <td>Social Science</td>
+    <td class="lunch" rowspan="3">LUNCH</td> <!-- "LUNCH" text common for all rows -->
+    <td>Sanskrit</td>
+  </tr>
+  <tr>
+    <td class="wednesday">Wednesday</td>
+    <td>Math</td>
+    <td>G.K</td>
+    <td>English</td>
+  </tr>
+  <tr>
+    <td class="friday">Friday</td>
+    <td>Science</td>
+    <td>Hindi</td>
+    <td>Computer</td>
+  </tr>
+</table>
+</body>
+</html>
